@@ -1,0 +1,60 @@
+PROJECT EXPLANATION
+
+System Name:
+Barangay Resident Information System
+
+Purpose:
+The system is made to help barangay officials store and manage resident
+information using a computerized database instead of paper records.
+
+Programming Tools:
+- PHP
+- PDO
+- MySQL
+- HTML
+- CSS
+- JavaScript
+- XAMPP
+
+OOP USED:
+The system uses classes and objects.
+
+Example:
+$resident = new Resident($conn);
+
+The class Resident contains functions such as:
+- addResident()
+- getAllResidents()
+- getResidentById()
+- updateResident()
+- deleteResident()
+- searchResidents()
+
+PDO USED:
+PDO is used to connect PHP to MySQL.
+
+Example:
+$stmt = $this->conn->prepare($query);
+$stmt->execute([$resident_id]);
+
+Prepared statements help keep SQL values separate from the SQL command.
+
+DATABASE RELATIONSHIPS:
+- One household can have many residents.
+- One resident can have many certificates.
+- One resident can have many requests.
+- One user can issue many certificates.
+- One user can post many announcements.
+- One user can have many activity logs.
+
+STUDENT PRESENTATION TIP:
+When explaining the code, focus on this pattern:
+
+FORM
+-> HANDLER
+-> OBJECT
+-> CLASS METHOD
+-> PDO QUERY
+-> DATABASE
+-> REDIRECT
+-> UPDATED TABLE
